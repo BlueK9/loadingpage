@@ -1,0 +1,66 @@
+body.loading {
+    overflow: hidden;
+}
+
+.loader {
+    position: fixed;
+    z-index: 41;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c8c8a9;
+    text-align: center;
+    animation: slideUp .3s cubic-bezier(.66, 0, .86, .61) 9s forwards;
+    transform: translateY(0%);
+
+}
+
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+
+
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+svg {
+    margin: 50px auto;
+    width: 45%;
+}
+
+.logo {
+    fill: #fe4365;
+}
+
+.clip {
+    animation: slide 3s infinite;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(-135px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(-135px);
+    }
+}
